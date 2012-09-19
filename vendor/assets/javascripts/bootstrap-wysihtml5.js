@@ -4,12 +4,12 @@
     var templates = {
         "font-styles": "<li class='dropdown'>" +
                            "<a class='btn dropdown-toggle' data-toggle='dropdown' href='#'>" +
-                               "<i class='icon-font'></i>&nbsp;<span class='current-font'>Normal text</span>&nbsp;<b class='caret'></b>" +
+                               "<i class='icon-font'></i>&nbsp;<span class='current-font'>Texto normal</span>&nbsp;<b class='caret'></b>" +
                            "</a>" +
                            "<ul class='dropdown-menu'>" +
-                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>Normal text</a></li>" +
-                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1'>Heading 1</a></li>" +
-                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2'>Heading 2</a></li>" +
+                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>Texto normal</a></li>" +
+                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1'>Título 1</a></li>" +
+                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2'>Título 2</a></li>" +
                            "</ul>" +
                        "</li>",
         "emphasis":    "<li>" +
@@ -21,60 +21,60 @@
                        "</li>",
         "lists":       "<li>" +
                            "<div class='btn-group'>" +
-                               "<a class='btn' data-wysihtml5-command='insertUnorderedList' title='Unordered List'><i class='icon-list'></i></a>" +
-                               "<a class='btn' data-wysihtml5-command='insertOrderedList' title='Ordered List'><i class='icon-th-list'></i></a>" +
-                               "<a class='btn' data-wysihtml5-command='Outdent' title='Outdent'><i class='icon-indent-right'></i></a>" +
-                               "<a class='btn' data-wysihtml5-command='Indent' title='Indent'><i class='icon-indent-left'></i></a>" +
+                               "<a class='btn' data-wysihtml5-command='insertUnorderedList' title='Lista no ordenada'><i class='icon-list-ul'></i></a>" +
+                               "<a class='btn' data-wysihtml5-command='insertOrderedList' title='Lista ordenada'><i class='icon-list-ol'></i></a>" +
+                               "<a class='btn' data-wysihtml5-command='Outdent' title='No indentar'><i class='icon-indent-right'></i></a>" +
+                               "<a class='btn' data-wysihtml5-command='Indent' title='Indentar'><i class='icon-indent-left'></i></a>" +
                            "</div>" +
                        "</li>",
         "link":        "<li>" +
                            "<div class='bootstrap-wysihtml5-insert-link-modal modal hide fade'>" +
                                "<div class='modal-header'>" +
                                    "<a class='close' data-dismiss='modal'>&times;</a>" +
-                                   "<h3>Insert Link</h3>" +
+                                   "<h3>Insertar enlace</h3>" +
                                "</div>" +
                                "<div class='modal-body'>" +
                                     "<div class='control-group'>" +
-                                      "<label class='control-label'>Text to display</label>" +
+                                      "<label class='control-label'>Texto a mostrar</label>" +
                                         "<div class='controls'>" +
                                           "<input class='bootstrap-wysihtml5-insert-link-url-display-text input-xlarge'>" +
-                                        "</div>" + 
+                                        "</div>" +
                                     "</div>" +
                                     "<div class='control-group'>" +
-                                      "<label class='control-label'>Link</label>" +
+                                      "<label class='control-label'>Enlace</label>" +
                                         "<div class='controls'>" +
                                           "<input value='http://' class='bootstrap-wysihtml5-insert-link-url input-xlarge'>" +
-                                        "</div>" + 
+                                        "</div>" +
                                     "</div>" +
                                "</div>" +
                                "<div class='modal-footer'>" +
-                                   "<a href='#' class='btn' data-dismiss='modal'>Cancel</a>" +
-                                   "<a href='#' class='btn btn-primary' data-dismiss='modal'>Insert link</a>" +
+                                   "<a href='#' class='btn' data-dismiss='modal'>Cancelar</a>" +
+                                   "<a href='#' class='btn btn-primary' data-dismiss='modal'>Insertar enlace</a>" +
                                "</div>" +
                            "</div>" +
-                           "<a class='btn' data-wysihtml5-command='createLink' title='Insert link'><i class='icon-link'></i></a>" +
+                           "<a class='btn' data-wysihtml5-command='createLink' title='Insertar enlace'><i class='icon-link'></i></a>" +
                        "</li>",
         "image":       "<li>" +
                            "<div class='bootstrap-wysihtml5-insert-image-modal modal hide fade'>" +
                                "<div class='modal-header'>" +
                                    "<a class='close' data-dismiss='modal'>&times;</a>" +
-                                   "<h3>Insert Image</h3>" +
+                                   "<h3>Insertar imagen</h3>" +
                                "</div>" +
                                "<div class='modal-body'>" +
                                    "<input value='http://' class='bootstrap-wysihtml5-insert-image-url input-xlarge'>" +
                                "</div>" +
                                "<div class='modal-footer'>" +
-                                   "<a href='#' class='btn' data-dismiss='modal'>Cancel</a>" +
-                                   "<a href='#' class='btn btn-primary' data-dismiss='modal'>Insert image</a>" +
+                                   "<a href='#' class='btn' data-dismiss='modal'>Cancelar</a>" +
+                                   "<a href='#' class='btn btn-primary' data-dismiss='modal'>Insertar imagen</a>" +
                                "</div>" +
                            "</div>" +
-                           "<a class='btn' data-wysihtml5-command='insertImage' title='Insert image'><i class='icon-picture'></i></a>" +
+                           "<a class='btn' data-wysihtml5-command='insertImage' title='Insertar imagen'><i class='icon-picture'></i></a>" +
                        "</li>",
 
         "html":
                        "<li>" +
                            "<div class='btn-group'>" +
-                               "<a class='btn' data-wysihtml5-action='change_view' title='Edit HTML'>HTML</a>" +
+                               "<a class='btn' data-wysihtml5-action='change_view' title='Editar HTML'>HTML</a>" +
                            "</div>" +
                        "</li>"
     };
@@ -302,7 +302,7 @@
                 // Get link and range for cursor
                 var link = self.editor.composer.commands.state("createLink");
                 var range = self.editor.composer.selection.getRange();
-                
+
                 // Update href
                 if (link && link[0] && link[0].href) {
                   urlInput.val(link[0].href);
@@ -311,7 +311,7 @@
                 // Make display text equal to the selected range, if range exists
                 if (range != "" && range) {
                   urlDisplayText.val(range);
-                } 
+                }
 
                 // else, if there was a previous display text use that
                 else {
